@@ -81,7 +81,12 @@ function displayCard(cardPlacement){ //placement is an array
 function reset() {
     
     //when reset button pressed
-    document.querySelector('#prize-div').textContent="";
+    let prize_img = document.querySelector('#prize-img');
+    if (prize_img){
+        prize_img.parentNode.removeChild(prize_img);
+    }
+    document.querySelector('#prize-text').textContent = "";
+    
     let allCards = document.querySelector('#Cards').querySelectorAll('img');
     for (i=0; i < allCards.length; i++){
         allCards[i].remove();
@@ -93,7 +98,7 @@ function reset() {
     betSlider.max = points;
     betSlider.value = min;
 
-    document.querySelector("#player-points").textContent = min;
+    document.querySelector("#player-points").textContent = points;
     document.querySelector("#player-points").style.color = 'black';
 
     placement = 0;

@@ -47,6 +47,7 @@ function getPrize(points){
     let prizeKey = Object.keys(prizes);
     let prizeLength = prizeKey.length;
     let prizeDiv = document.querySelector('#prize-div');
+    //let prizeTextHtml = new Text("")
     let prizeTextHtml = document.querySelector('#prize-text');
     let prizeImg = new Image();
     
